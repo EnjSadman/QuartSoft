@@ -1,0 +1,39 @@
+{"frames": {
+
+"flying_twin_headed_dragon-blue1.png":
+{
+	"frame": {"x":0,"y":0,"w":147,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":147,"h":128},
+	"sourceSize": {"w":147,"h":128}
+},
+"flying_twin_headed_dragon-blue2.png":
+{
+	"frame": {"x":147,"y":0,"w":144,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":144,"h":128},
+	"sourceSize": {"w":144,"h":128}
+},
+"flying_twin_headed_dragon-blue3.png":
+{
+	"frame": {"x":291,"y":0,"w":144,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":144,"h":128},
+	"sourceSize": {"w":144,"h":128}
+}},
+"animations": {
+	"flying_twin_headed_dragon-blue": ["flying_twin_headed_dragon-blue1.png","flying_twin_headed_dragon-blue2.png","flying_twin_headed_dragon-blue3.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "BlueTwoHeaded.png",
+	"format": "RGBA8888",
+	"size": {"w":435,"h":128},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:8fbd2fcfe2ce162d3b9d21fef53d17d4:a41d4b448cc2078efae094f83840ba73:9eb74dad27d439934a0b9ff83468dc05$"
+}
+}

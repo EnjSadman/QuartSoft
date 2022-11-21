@@ -1,0 +1,195 @@
+{
+	"frames": {
+		"flying_dragon-red1.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 146,
+				"h": 128
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 146,
+				"h": 128
+			},
+			"sourceSize": {
+				"w": 146,
+				"h": 128
+			}
+		},
+		"flying_dragon-red2.png": {
+			"frame": {
+				"x": 149,
+				"y": 1,
+				"w": 144,
+				"h": 128
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 144,
+				"h": 128
+			},
+			"sourceSize": {
+				"w": 144,
+				"h": 128
+			}
+		},
+		"flying_dragon-red3.png": {
+			"frame": {
+				"x": 1,
+				"y": 131,
+				"w": 142,
+				"h": 128
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 142,
+				"h": 128
+			},
+			"sourceSize": {
+				"w": 142,
+				"h": 128
+			}
+		},
+		"flying_twin_headed_dragon-blue1.png": {
+			"frame": {
+				"x": 145,
+				"y": 131,
+				"w": 147,
+				"h": 128
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 147,
+				"h": 128
+			},
+			"sourceSize": {
+				"w": 147,
+				"h": 128
+			}
+		},
+		"flying_twin_headed_dragon-blue2.png": {
+			"frame": {
+				"x": 1,
+				"y": 261,
+				"w": 144,
+				"h": 128
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 144,
+				"h": 128
+			},
+			"sourceSize": {
+				"w": 144,
+				"h": 128
+			}
+		},
+		"flying_twin_headed_dragon-blue3.png": {
+			"frame": {
+				"x": 147,
+				"y": 261,
+				"w": 144,
+				"h": 128
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 144,
+				"h": 128
+			},
+			"sourceSize": {
+				"w": 144,
+				"h": 128
+			}
+		},
+		"flying_twin_headed_dragon-red1.png": {
+			"frame": {
+				"x": 295,
+				"y": 1,
+				"w": 144,
+				"h": 128
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 144,
+				"h": 128
+			},
+			"sourceSize": {
+				"w": 144,
+				"h": 128
+			}
+		},
+		"flying_twin_headed_dragon-red2.png": {
+			"frame": {
+				"x": 294,
+				"y": 131,
+				"w": 144,
+				"h": 128
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 144,
+				"h": 128
+			},
+			"sourceSize": {
+				"w": 144,
+				"h": 128
+			}
+		},
+		"flying_twin_headed_dragon-red3.png": {
+			"frame": {
+				"x": 293,
+				"y": 261,
+				"w": 144,
+				"h": 128
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 144,
+				"h": 128
+			},
+			"sourceSize": {
+				"w": 144,
+				"h": 128
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 440,
+			"h": 390
+		},
+		"scale": "1"
+	}
+}
