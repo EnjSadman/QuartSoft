@@ -1,4 +1,5 @@
 {
+  "homepage": "https://enjsadman.github.io/QuartSoft/",
   "scripts": {
     "build": "webpack --mode production",
     "deploy": "gh-pages -d dist"
