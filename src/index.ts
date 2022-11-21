@@ -40,7 +40,7 @@ app.stage.addChild(counterContainer);
 
 
 const fetcher = async () => {
-  const result = await fetch('../src/api.json');
+  const result = await fetch('./api.json');
 
   return result.json();
 }
