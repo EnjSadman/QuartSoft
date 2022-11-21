@@ -1,0 +1,39 @@
+{"frames": {
+
+"flying_dragon-red1.png":
+{
+	"frame": {"x":0,"y":0,"w":146,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":146,"h":128},
+	"sourceSize": {"w":146,"h":128}
+},
+"flying_dragon-red2.png":
+{
+	"frame": {"x":146,"y":0,"w":144,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":144,"h":128},
+	"sourceSize": {"w":144,"h":128}
+},
+"flying_dragon-red3.png":
+{
+	"frame": {"x":290,"y":0,"w":142,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":142,"h":128},
+	"sourceSize": {"w":142,"h":128}
+}},
+"animations": {
+	"flying_dragon-red": ["flying_dragon-red1.png","flying_dragon-red2.png","flying_dragon-red3.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "singleRed.png",
+	"format": "RGBA8888",
+	"size": {"w":432,"h":128},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:14b9aeb46bfcddedcd83a037c2587f43:e77bfe000d1e811d90251c5d6785c16c:23db28d86df2d80baf7c5ab15347d85b$"
+}
+}

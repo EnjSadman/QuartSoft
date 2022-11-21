@@ -1,0 +1,20 @@
+{
+  "enemies": [
+    {
+      "name": "flying_dragon-red",
+      "x": 100,
+      "y": 100
+    },
+    {
+      "name": "flying_dragon-red",
+      "x": 200,
+      "y": 200
+    },
+    {
+      "name": "flying_dragon-red",
+      "x": 300,
+      "y": 300
+    }
+  ]
+    
+}
