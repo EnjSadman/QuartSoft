@@ -1,62 +1,113 @@
-import { Application, AnimatedSprite, Assets } from 'pixi.js';
-import { v4 as uuidv4 } from 'uuid';
+import { Application, AnimatedSprite, Assets, Sprite, Texture, Container, TilingSprite } from 'pixi.js';
+import { Enemy } from './components/classes';
+import {Howl, Howler} from 'howler';
+import { getRandomInt } from './components/randomInt';
 
 const app : any = new Application({
   width: window.innerWidth,
   height: window.innerHeight,
+  background: 0x00BFFF,
 });
-window.onload = () => {
-  document.body.appendChild(app.view);
-}
+
+const backgroundSong = new Howl({
+  src: ['./sounds/Thunderdome.mp3'],
+  autoplay: true,
+  loop: true,
+  volume: 0.3,
+})
 
 
-const texture = await Assets.load('./images/singleRed.json');
+document.body.appendChild(app.view);
+
+const texturesArray = {
+  'flying_dragon-red': await Assets.load('./images/singleRed.json'),
+  'flying_twin_headed_dragon-red': await Assets.load('./images/RedTwoHeaded.json'),
+  'flying_twin_headed_dragon-blue': await Assets.load('./images/BlueTwoHeaded.json'), 
+} as any;
+
+const epxlosionTexture = await Assets.load('./images/explosion.json');
+
+const numbers = await Assets.load('./images/numbers.json');
+const clouds = Texture.from('./images/cloud.png');
+const cloudsSprite = new TilingSprite(clouds, window.innerWidth, window.innerHeight);
+  cloudsSprite.tileScale.set(0.1, 0.1);
+app.ticker.add(function() {
+  cloudsSprite.tilePosition.y -= 1;
+})
+app.stage.addChild(cloudsSprite);
+const counterContainer = new Container();
+app.stage.addChild(counterContainer);
 
 
-class Enemy extends AnimatedSprite{
-  model: string;
-  id: string;
-  constructor(model : string) {
-    super(texture.animations[`${model}`]);
-    this.id = uuidv4();
-  }
-}
 const fetcher = async () => {
-  const a = await fetch('../src/api.json');
+  const result = await fetch('../src/api.json');
 
-  return a.json();
+  return result.json();
 }
 
-async function promiseSet() {
-  const b = await fetcher();
-
-  return b
-} 
+let enemiesCount = 0;
 
 const spriter = async () => {
-  const a = await promiseSet();
+  const info = await fetcher();
 
-  a.enemies.forEach((element : any)=> {
-    const sprite = new Enemy(element.name) as any;
-    sprite.position.x = element.x;
-    sprite.position.y = element.y;
-    sprite.animationSpeed = 0.09;
-    sprite.play();
+  info.enemies.forEach((enemy : any)=> {
+    const sprite = new Enemy(enemy.name, texturesArray) as any;
+    sprite.position.x = enemy.x;
+    sprite.position.y = enemy.y;
+    sprite.animationSpeed = 0.1;
+    sprite.gotoAndPlay(getRandomInt(0, 2));
     sprite.interactive = true;
     sprite.cursor = 'pointer';
-    sprite.on('click', killEnemy)
+    sprite.on('click', killEnemy);
+    enemiesCount++;
     app.stage.addChild(sprite);
   });
 }
 
 function killEnemy ()  {
+  const x = this.x;
+  const y = this.y;
+
   this.destroy();
-  console.log(app.stage.children.filter((el : any)=> {
-    el.id !== undefined
-  }))
+
+  const deathAnimation =  new AnimatedSprite(epxlosionTexture.animations['exp']);
+  const explosionSound = new Howl ({
+    src: ['./sounds/explosion.wav'],
+  });
+
+  deathAnimation.width = 144;
+  deathAnimation.height = 128;
+  deathAnimation.x = x;
+  deathAnimation.y = y;
+  deathAnimation.play();
+  deathAnimation.loop = false;
+  deathAnimation.onComplete = () => {
+    explosionSound.play();
+    deathAnimation.destroy();
+  };
+  app.stage.addChild(deathAnimation);
+  enemiesCount--;
+  counter();
 };
 
-spriter();
+const counter = () => {
+  counterContainer.removeChildren();
+  const countLength = enemiesCount + '';
+  for (let i = 0; i <= countLength.length; i++) {
+    const numSprite = new Sprite(numbers.textures[`Number${countLength[i]} 7x10.png`]);
+    numSprite.width = 10;
+    numSprite.height = 13;
+    if ( i !== 0) {
+      numSprite.x += 13
+    }
+    
+   counterContainer.addChild(numSprite);
+  }
+}
+
+await spriter();
+counter();
+
 
 
 

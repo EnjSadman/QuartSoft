@@ -1,0 +1,39 @@
+{"frames": {
+
+"flying_twin_headed_dragon-red1.png":
+{
+	"frame": {"x":0,"y":0,"w":144,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":144,"h":128},
+	"sourceSize": {"w":144,"h":128}
+},
+"flying_twin_headed_dragon-red2.png":
+{
+	"frame": {"x":144,"y":0,"w":144,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":144,"h":128},
+	"sourceSize": {"w":144,"h":128}
+},
+"flying_twin_headed_dragon-red3.png":
+{
+	"frame": {"x":288,"y":0,"w":144,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":144,"h":128},
+	"sourceSize": {"w":144,"h":128}
+}},
+"animations": {
+	"flying_twin_headed_dragon-red": ["flying_twin_headed_dragon-red1.png","flying_twin_headed_dragon-red2.png","flying_twin_headed_dragon-red3.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "RedTwoHeaded.png",
+	"format": "RGBA8888",
+	"size": {"w":432,"h":128},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:cf1652a2c5f7c6199ca1a4015d8fb803:5fbea8aaa48f4ca54488b091b0fcb0b5:41b46955b5da53ebdd479ac408827157$"
+}
+}
